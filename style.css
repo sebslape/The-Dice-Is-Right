@@ -1,67 +1,112 @@
-body {
-	background-image: url('background.jpg');
-	background-size: 400px;
-	min-height: 100vh;
-}
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
 
 @font-face {
 	font-family: 'Seven Segment';
-	src: url('Seven Segment.ttf') format('truetype');
+	src: url('Fonts/Seven Segment.ttf') format('truetype');
 }
 
-h1, h2, p {
-	font-family: 'Seven Segment';
+@font-face {
+	font-family: 'Arcade';
+	src: url('Fonts/ARCADE_N.ttf') format('truetype');
 }
 
-h1 {
+body {
+	min-height: 100vh;
+}
+
+.title {
+	font-family: 'Mr Dafoe', sans-serif;
+	text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+	font-weight: normal;
+	color: white;
 	text-align: center;
-	margin: 0;
-	font-size: 10em;
-	color: red;
-	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-}
-
-.dice {
-	height: 100%;
-	background-color: dodgerblue;
-}
-
-.scoreboard {
-	height: 100%;
-	background-color: white;
-}
-
-.main-container {
-	max-width: 1200px;
-	margin: auto;
-}
-
-.inner-container {
-	height: 700px;
-}
-
-h2 {
-	margin: 0;
-}
-
-#statusBar {
-	text-align: center;
-}
-
-#dice {
-	position: relative;
-	top: 50%;
-	left: 50%;
-	-ms-transform: translate(-50%,-70%);
-	transform: translate(-50%,-70%);
+	font-size: 7em;
+	padding: 40px 0px;
 }
 
 .start-container {
 	max-width: 500px;
 	margin: auto;
 	text-align: center;
+	background-color: #1e1e28;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+	background-size: 20px 10px;
+	padding: 50px 0px;
 }
 
-#gameContainer p, #gameContainer h2 {
-	color: black;
+.main-container {
+	max-width: 1200px;
+	min-height: 600px;
+	margin: auto;
+	display: none;
+	background: linear-gradient(180deg, #2b1165 0%, #1a3a82 37%, #ab24b1 69%, #f54171 100%);
+}
+
+.inner-container {
+	display: inline-block;
+	width: 100%;
+	min-height: 600px;
+	height: 100%;
+	background: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+	background-size: 5px 5px, 5px 5px;
+}
+
+.dice-container {
+	height: 100%;
+	position: relative;
+	padding: 40px 0px;
+	text-align: center;
+}
+
+.scoreboard-container {
+	height: 100%;
+	padding: 40px 0px;
+}
+
+#statusBar {
+	text-align: center;
+	width: 90%;
+	font-size: 2em;
+	font-family: 'Arcade', sans-serif;
+	color: white;
+	margin: auto
+}
+
+h1 > a {
+	color: white;
+}
+
+#dice {
+	width: 200px;
+	padding-top: 40px;
+}
+
+.scoreboard-entry {
+	padding: 0px 0px 20px 0px;
+	margin-left: 40px;
+}
+
+.scoreboard-entry > h2 {
+	color: white;
+	font-family: 'Seven Segment', sans-serif;
+	font-size: 2.5em;
+}
+
+.players-label {
+	color: white;
+	display: block;
+}
+
+.players-input {
+	width: 200px;
+}
+
+.start-button {
+	width: 200px;
+	height: 50px;
+}
+
+label, input, button {
+	font-family: 'Arcade', sans-serif;
 }

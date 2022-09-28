@@ -5,28 +5,55 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="framework.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="background.css">
         <script defer src="main.js"></script>
     </head>
     <body>
+        <div class="stars-container">
+            <div class="space stars1"></div>
+            <div class="space stars2"></div>
+            <div class="space stars3"></div>
+        </div>
         <div>
-            <h1>The Dice Is Right</h1>
+            <h1 class="title"><a href="">The Dice Is Right</a></h1>
         </div>
-        <div class="start-container" id="startContainer">
-            <input id="numPlayers" type="number">
-            <button id="startBtn">Start</button>
+        <div class="start-container box-shadow" id="startContainer">
+            <div>
+                <label class="players-label">Players:</label>
+                <input class="players-input" id="numPlayers" type="number">
+            </div>
+            <div>
+                <button class="start-button" id="startBtn">Start</button>
+            </div>
         </div>
-        <section class="main-container" id="gameContainer">
+        <section class="main-container box-shadow" id="gameContainer">
             <div class="inner-container">
-                <div class="dice container-7/12">
+                <div class="dice-container container-8/12">
                     <h2 id="statusBar">
-                        Status Bar
+                        Click the dice to start
                     </h2>
-                    <img id="dice" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f6dccda1-e1c5-491b-bfc5-7eb82dcefc12/d2vb2e2-5b2d2569-1ba7-4977-9f75-230fe66eae6c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y2ZGNjZGExLWUxYzUtNDkxYi1iZmM1LTdlYjgyZGNlZmMxMlwvZDJ2YjJlMi01YjJkMjU2OS0xYmE3LTQ5NzctOWY3NS0yMzBmZTY2ZWFlNmMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.J9ziFn_8vggafXcrGUQyO42mX740NGeI6LplKsFIrwA">
+                    <img id="dice" src="Dice/Dice-6.svg">
                 </div>
-                <div class="scoreboard container-5/12">
-                    <div>
-                        <h2>Hi</h2>
-                        <p>5,4,2,6</p>
+                <div class="scoreboard-container container-4/12">
+                    <div class="scoreboard-entry">
+                        <h2 id="player1"></h2>
+                        <h2 id="player1History"></h2>
+                    </div>
+                    <div class="scoreboard-entry">
+                        <h2 id="player2"></h2>
+                        <h2 id="player2History"></h2>
+                    </div>
+                    <div class="scoreboard-entry">
+                        <h2 id="player3"></h2>
+                        <h2 id="player3History"></h2>
+                    </div>
+                    <div class="scoreboard-entry">
+                        <h2 id="player4"></h2>
+                        <h2 id="player4History"></h2>
+                    </div>
+                    <div class="scoreboard-entry">
+                        <h2 id="player5"></h2>
+                        <h2 id="player5History"></h2>
                     </div>
                 </div>
             </div>
