@@ -41,7 +41,6 @@ function onStart() {
     players = sanitiseNumPlayers(numPlayers.value); // Sanitise the number of players VIA clamping
     playerScores = []; // Reset player scores
 
-    // Loop through all of the possible players
     for (let i = 0; i < 5; i++) {
 
         // Fill the player scores array with zeros
@@ -51,7 +50,6 @@ function onStart() {
         document.getElementById("player" + (i + 1)).textContent = "";
         document.getElementById("player" + (i + 1) + "History").textContent = "";
     }
-    // Loop through all of the actual players
     for (let i = 0; i < players; i++) {
 
         // Set the text of the scoreboard for each of the players
@@ -154,7 +152,8 @@ function updateDiceRoll() {
 }
 
 function onDiceRoll() {
-    if (canRoll == false) { // Stop the player from rolling the dice if the animation is ongoing
+    // Stop the player from rolling the dice if the animation is ongoing
+    if (canRoll == false) { 
         return;
     }
 
