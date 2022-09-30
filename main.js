@@ -30,7 +30,7 @@ function finishSetup() {
     startContainer.style.display = "none"; // Hide the start container
     
     gameContainer.style.display = "block"; // Show the game container
-    setTimeout(() => { finishFade() }, 1); // Fixes glitch with game container not fading in
+    setTimeout(() => { finishFade() }, 50); // Fixes glitch with game container not fading in
 
     canRoll = true; // Allow the player to roll the dice
 }
@@ -101,26 +101,20 @@ function checkForSpecialRolls(playerScores, playerHistory, roll) {
                 // If the player has rolled three of the same number in a row, continue
                 if (roll == playerHistory[playerHistory.length - 3]) { 
 
-                    // Display the roll
+                    // Display the roll and return the roll
                     statusBar.textContent = "Player " + ((turn % players) + 1).toString() + " rolled three " + roll + "'s giving them " + (roll * 3) + "!";
-
-                    // Return the roll
                     return roll * 3;
                 }
             }
 
-            // Display the roll
+            // Display the roll and return the roll
             statusBar.textContent = "Player " + ((turn % players) + 1).toString() + " rolled two " + roll + "'s giving them " + (roll * 2) + "!";
-
-            // Return the roll
             return roll * 2;
         }
     }
 
-    // Display the roll
+    // Display the roll and return the roll
     statusBar.textContent = "Player " + ((turn % players) + 1).toString() + " rolled a " + roll + "!";
-
-    // Return the roll
     return roll;
 }
 
@@ -137,7 +131,8 @@ function updateDiceRoll() {
 
     rollHistory[turnPlayer].push(roll); // Push the roll into the players roll history
 
-    roll = checkForSpecialRolls(playerScores, rollHistory[turnPlayer], roll); // Calculate the dice rolls score by checking for doubles, triples, and rolls of 1's
+    // Calculate the dice rolls score by checking for doubles, triples, and rolls of 1's
+    roll = checkForSpecialRolls(playerScores, rollHistory[turnPlayer], roll);
     playerScores[turnPlayer] += roll; // Add the roll to the players score
 
     // Create the string that will replace the players scoreboard entry
