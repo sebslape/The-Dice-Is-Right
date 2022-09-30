@@ -23,6 +23,7 @@ body {
 	text-align: center;
 	font-size: 7em;
 	padding: 40px 0px;
+	transition: 0.5s ease-in-out;
 }
 
 .start-container {
@@ -33,6 +34,7 @@ body {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
 	background-size: 20px 10px;
 	padding: 50px 0px;
+	transition: 0.5s ease-in-out;
 }
 
 .main-container {
@@ -41,6 +43,8 @@ body {
 	margin: auto;
 	display: none;
 	background: linear-gradient(180deg, #2b1165 0%, #1a3a82 37%, #ab24b1 69%, #f54171 100%);
+	transition: 0.5s ease-in-out;
+	opacity: 0;
 }
 
 .inner-container {
@@ -83,7 +87,7 @@ h1 > a {
 }
 
 .scoreboard-entry {
-	padding: 0px 0px 20px 0px;
+	padding: 0px 0px 10px 0px;
 	margin-left: 40px;
 }
 
