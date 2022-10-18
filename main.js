@@ -13,13 +13,14 @@ let rollHistory = []; // INT 2D ARRAY - The roll history for each of the players
 
 let canRoll = false; // BOOL - If the player can roll
 
-function sanitiseNumPlayers(number) {
-    if (number > 5) { // If the number is more than five, set it to five
+function clampNumPlayers(number) {
+    // Clamp number so it is between 2 and 5
+    if (number > 5) {
         number = 5;
-    } else if (number < 2) { // If the number is less than two, set it to two
+    } else if (number < 2) {
         number = 2;
     }
-    return number; // Return the sanitised number
+    return number; // Return the clamped number
 }
 
 function finishFade() {
@@ -38,7 +39,7 @@ function finishSetup() {
 function onStart() {
 
     turn = 0; // Reset the turn to zero
-    players = sanitiseNumPlayers(numPlayers.value); // Sanitise the number of players VIA clamping
+    players = clampNumPlayers(numPlayers.value); // Sanitise the number of players VIA clamping
     playerScores = []; // Reset player scores
 
     for (let i = 0; i < 5; i++) {
