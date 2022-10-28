@@ -3,12 +3,12 @@
 
 @font-face {
 	font-family: 'Seven Segment';
-	src: url('Fonts/Seven Segment.ttf') format('truetype');
+	src: url('../Fonts/Seven Segment.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Arcade';
-	src: url('Fonts/ARCADE_N.ttf') format('truetype');
+	src: url('../Fonts/ARCADE_N.ttf') format('truetype');
 }
 
 body {

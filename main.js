@@ -5,6 +5,15 @@ let playerScores = []; // INT 1D ARRAY - The scores of the players
 let rollHistory = []; // INT 2D ARRAY - The roll history for each of the players
 
 // 3 PLAYER EXAMPLE
+//
+// playerScores:
+// [
+//   7,  - Player 1's score
+//   11, - Player 2's score
+//   12  - Player 3's score
+// ]
+//
+// rollHistory:
 // [
 //   [2,4,1] - Player 1's roll history
 //   [6,3,2] - Player 2's roll history
